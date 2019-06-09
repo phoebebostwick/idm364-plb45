@@ -1,0 +1,237 @@
+:root {
+	box-sizing: border-box;
+	font-size: 100%;
+	--sunnyYellow: #ffdd55;
+	--softPink: #E3C1C0;
+
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Tajawal&display=swap');
+
+
+body {
+	background-color: white;
+	font: 100%/1.5 sans-serif;
+}
+
+body {
+  font-family:'Tajawal', sans-serif;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+  color: var(--sunnyYellow);
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--softPink);
+  margin-bottom: 0;
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+p {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.itemsContainer, .inventory{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.item, .item-edit {
+  width: 20%;
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item.inactive {
+  opacity: .25;
+}
+
+.item.inactive button {
+  opacity: 0;
+}
+
+.item img, .item-edit img{
+  width: 100%;
+}
+
+.itemInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.add{
+  background-color: var(--sunnyYellow);
+  color: white;
+  border: none;
+  width: 100%;
+  font-family: 'Pacifico';
+  margin: 2rem 0 2rem 0;
+  align-self: flex-end;
+  cursor: pointer;
+  flex-grow: 3;
+  font-size: 1.25rem;
+}
+
+#cart {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+	transition: opacity 200ms;
+  visibility: hidden;
+	opacity: 0;
+}
+
+#cart:target {
+  visibility: visible;
+  opacity: 1;
+ }
+
+.cartModal {
+	margin: 75px auto;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #666;
+	width: 700px;
+	box-shadow: 0 0 50px rgba(0,0,0,0.5);
+	position: relative;
+}
+
+.cartModal h1 {
+	font-size: 3rem;
+	margin-bottom: 2rem;
+}
+
+.inCartItem {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+
+.cartItemCount {
+	width: 7rem;
+	text-align: center;
+  border-right: 2px solid var(--softPink);
+
+}
+
+.cartItemName {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.cartItemPrice {
+	position: absolute;
+	right: 25px;
+	width: 3rem;
+	text-align: center;
+  border-left: 2px solid var(--softPink);
+
+}
+
+.total {
+  color: black;
+  text-align: right;
+  margin: 2rem;
+}
+
+.close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--sunnyYellow);
+}
+
+.content {
+  max-height: 400px;
+  overflow: auto;
+}
+
+.controlgroup {
+  margin: 10px 0px 10px 0px;
+  width: 100%;
+}
+
+label {
+  font-size: 1.25rem;
+}
+
+input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-left: 15px;
+}
+
+select {
+  margin-left: 15px;
+}
+
+textarea {
+  width: 100%;
+}
+
+input, select, textarea {
+  font-size: 1rem;
+}
+
+.delete {
+  background-color: var(--softPink);
+  color: white;
+  border: none;
+  width: 100%;
+  font-family: 'Pacifico';
+  margin: 2rem 0 2rem 0;
+  cursor: pointer;
+  flex-grow: 3;
+  font-size: 1.25rem;
+}
+
+.reloadContainer {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0 25px 0;
+}
+
+.reload {
+  background-color: var(--sunnyYellow);
+  font-family: 'Pacifico';
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: auto;
+}
