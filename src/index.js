@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import App from './components/App';
 import './screen.css';
 
-render(
+ReactDOM.render(
   <>
   	<Router basename={process.env.PUBLIC_URL}>
     	<App />
